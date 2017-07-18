@@ -48,4 +48,4 @@ function mapDispatchToProps(dispatch) {
 }
 
 
-export default connect(mapDispatchToProps, mapDispatchToProps)(PeoplePage);
+export default connect(mapStateToProps, mapDispatchToProps)(PeoplePage);
