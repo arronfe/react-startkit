@@ -17,3 +17,7 @@
 
     npm i -g serve
     serve -s build
+
+#### Test
+
+    npm run test

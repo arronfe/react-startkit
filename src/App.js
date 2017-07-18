@@ -2,12 +2,12 @@ import React, {Component} from 'react';
 import { Link, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import './App.less';
 
-import Page1 from './pages/Page1';
-import Page2 from './pages/Page2';
-import Page3 from './pages/Page3';
 import PeoplePage from './pages/PeoplePage';
+import routes  from './routes';
+import RouteWithSubRoutes from './components/RouteWithSubRoutes';
 
 class App extends Component {
+
   render() {
     return (
       <Router>
@@ -17,13 +17,9 @@ class App extends Component {
           <Link to="/page2">Go Page2</Link>
           <Link to="/page3">Go Page3</Link>
           <PeoplePage />
-
-
-          <Switch>
-          <Route path="/page1" component={Page1} />
-          <Route path="/page2" component={Page2} />
-          <Route path="/page3" component={Page3} />
-          </Switch>
+          {routes.map((route, i) => (
+            <RouteWithSubRoutes key={i} {...route}/>
+          ))}
         </div>
       </Router>
     );
