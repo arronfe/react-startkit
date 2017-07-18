@@ -1,7 +1,7 @@
 /**
  * Created by arron on 2017/7/18.
  */
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const Person = ({person}) => (

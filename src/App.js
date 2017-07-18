@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import { Link, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Link, BrowserRouter as Router } from 'react-router-dom';
 import './App.less';
 
 import PeoplePage from './pages/PeoplePage';
 import routes  from './routes';
 import RouteWithSubRoutes from './components/RouteWithSubRoutes';
+import PrivateRoute from './components/PrivateRoute';
 
 class App extends Component {
   render() {
@@ -17,7 +18,7 @@ class App extends Component {
           <Link to="/page3">Go Page3</Link>
           <PeoplePage />
           {routes.map((route, i) => (
-            <RouteWithSubRoutes key={i} {...route}/>
+            route.authorizePage ? <PrivateRoute path={route.path} component={route.component} key={i}/> : <RouteWithSubRoutes key={i} {...route}/>
           ))}
         </div>
       </Router>

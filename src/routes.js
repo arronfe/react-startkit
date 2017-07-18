@@ -1,13 +1,13 @@
 /**
  * Created by arron on 2017/7/18.
  */
-import React from 'react';
 
 import Page1 from './pages/Page1';
 import Page2 from './pages/Page2';
 import Page3 from './pages/Page3';
 import Bus from './pages/Bus';
 import Cart from './pages/Cart';
+import Login from './pages/Login';
 
 const routes = [
   {
@@ -21,6 +21,7 @@ const routes = [
   {
     path: '/page3',
     component: Page3,
+    authorizePage: true,
     routes: [
       {
         path: '/page3/bus',
@@ -31,6 +32,10 @@ const routes = [
         component: Cart
       }
     ]
+  },
+  {
+    path: '/login',
+    component: Login
   }
 ];
 

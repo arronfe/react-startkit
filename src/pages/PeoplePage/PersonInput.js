@@ -5,10 +5,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class PersonInput extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   onAddPersonClick = () => {
     const firstNameElement = document.getElementById('firstname');
     const lastNameElement = document.getElementById('lastname');

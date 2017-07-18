@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 class Page3 extends Component {
   render() {
     const { routes, match } = this.props;
-    console.log(this.props)
+    console.log(routes)
     return (
       <div>
         <h2>hello page3</h2>

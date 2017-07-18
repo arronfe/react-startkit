@@ -20,9 +20,6 @@ class PeoplePage extends Component {
 
   render() {
     const { people } = this.props;
-
-    console.log(this.props)
-
     return (
       <div>
         <PersonInput addPerson={this.props.actions.addPerson} />
