@@ -7,7 +7,6 @@ import routes  from './routes';
 import RouteWithSubRoutes from './components/RouteWithSubRoutes';
 
 class App extends Component {
-
   render() {
     return (
       <Router>
