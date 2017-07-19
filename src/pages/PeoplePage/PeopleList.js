@@ -8,8 +8,8 @@ import Person from './Person';
 
 const PeopleList = ({people}) => (
   <div>
-    {people.map(person =>
-      <Person key={person.lastname} person={person}/>
+    {people.map((person, i) =>
+      <Person key={i} person={person}/>
     )}
   </div>
 );

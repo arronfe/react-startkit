@@ -7,6 +7,8 @@ import routes  from './routes';
 import RouteWithSubRoutes from './components/RouteWithSubRoutes';
 import PrivateRoute from './components/PrivateRoute';
 
+import './App.less';
+
 class App extends Component {
   render() {
     return (

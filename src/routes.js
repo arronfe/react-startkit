@@ -21,7 +21,6 @@ const routes = [
   {
     path: '/page3',
     component: Page3,
-    authorizePage: true,
     routes: [
       {
         path: '/page3/bus',
@@ -31,7 +30,7 @@ const routes = [
         path: '/page3/cart',
         component: Cart
       }
-    ]
+    ],
   },
   {
     path: '/login',

@@ -10,6 +10,16 @@ const addPerson = person => {
   }
 };
 
+
+// redux-thunk function
+
+const testThunk = (person) => {
+  return (dispatch, getState) => {
+    dispatch(addPerson(person))
+  }
+};
+
 export {
-  addPerson
+  addPerson,
+  testThunk
 }

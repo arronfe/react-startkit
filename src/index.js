@@ -5,6 +5,8 @@ import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 import configureStore from './store';
 
+import './styles/common/reset.less';
+
 const store = configureStore();
 
 ReactDOM.render(

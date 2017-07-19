@@ -19,10 +19,12 @@ class PeoplePage extends Component {
   }
 
   render() {
+    console.log(this.props);
     const { people } = this.props;
+    console.log(people)
     return (
       <div>
-        <PersonInput addPerson={this.props.actions.addPerson} />
+        <PersonInput testThunk={this.props.actions.testThunk} />
         <PeopleList people={people} />
       </div>
     )

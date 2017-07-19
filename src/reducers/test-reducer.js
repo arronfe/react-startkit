@@ -3,16 +3,11 @@
  */
 import * as types from '../actions/action-types';
 
-let initialState = {
-  todos: [{
-    firstname: 'arron',
-    lastname: 'zhang'
-  }]
-};
+let initialState = [];
 
-export default (state = initialState.todos, action) => {
+export default (state = initialState, action) => {
   switch (action.type) {
-    case types.ADD_PERSON:
+    case types.ADD_TEST:
       return [...state, Object.assign({}, action.person)];
     default:
       return state;

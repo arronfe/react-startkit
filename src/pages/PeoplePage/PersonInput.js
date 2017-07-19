@@ -9,7 +9,7 @@ class PersonInput extends Component {
     const firstNameElement = document.getElementById('firstname');
     const lastNameElement = document.getElementById('lastname');
 
-    this.props.addPerson({
+    this.props.testThunk({
       firstname: firstNameElement.value,
       lastname: lastNameElement.value
     });
@@ -35,7 +35,7 @@ class PersonInput extends Component {
 }
 
 PersonInput.propTypes = {
-  addPerson: PropTypes.func.isRequired
+  testThunk: PropTypes.func.isRequired
 };
 
 export default PersonInput;
