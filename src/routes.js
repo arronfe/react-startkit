@@ -2,40 +2,70 @@
  * Created by arron on 2017/7/18.
  */
 
-import Page1 from './pages/Page1';
-import Page2 from './pages/Page2';
-import Page3 from './pages/Page3';
-import Bus from './pages/Bus';
-import Cart from './pages/Cart';
-import Login from './pages/Login';
+import App from './App';
 
-const routes = [
-  {
-    path: '/page1',
-    component: Page1
+const routes = {
+  path: '/',
+  component: App,
+  indexRoute: {
+    getComponent: (nextState, cb) => {
+      require.ensure([], (require) => {
+        import ('./pages/Home').then((Home) => {
+          cb(null, Home.default)
+        })
+      })
+    }
   },
-  {
-    path: '/page2',
-    component: Page2
-  },
-  {
-    path: '/page3',
-    component: Page3,
-    routes: [
-      {
-        path: '/page3/bus',
-        component: Bus
+  childRoutes: [{
+    path: 'page1',
+    getComponent: (nextState, cb) => {
+      require.ensure([], (require) => {
+        import ('./pages/Page1').then((Page1) => {
+          cb(null, Page1.default)
+        })
+      })
+    }
+  }, {
+    path: 'page2',
+    getComponent: (nextState, cb) => {
+      require.ensure([], (require) => {
+        import ('./pages/Page2').then((Page2) => {
+          cb(null, Page2.default)
+        })
+      })
+    }
+  }, {
+    path: 'page3',
+    getComponent: (nextState, cb) => {
+      require.ensure([], (require) => {
+        import ('./pages/Page3').then((Page3) => {
+          cb(null, Page3.default)
+        })
+      })
+    },
+    childRoutes: [{
+      path: 'bus',
+      getComponent: (nextState, cb) => {
+        require.ensure([], (require) => {
+          import ('./pages/Bus').then((Bus) => {
+            cb(null, Bus.default)
+          })
+        })
       },
-      {
-        path: '/page3/cart',
-        component: Cart
+      onEnter: (() => console.log('entry bus component'))
+    }, {
+      path: 'cart',
+      getComponent: (nextState, cb) => {
+        require.ensure([], (require) => {
+          import ('./pages/Cart').then((Cart) => {
+            cb(null, Cart.default)
+          })
+        })
       }
-    ],
-  },
-  {
-    path: '/login',
-    component: Login
-  }
-];
+    }]
+  }]
+};
+
+
 
 export default routes;

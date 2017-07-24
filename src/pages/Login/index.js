@@ -1,5 +1,9 @@
-import React, {Component} from 'react';
-import { Redirect } from 'react-router-dom';
+import React, {
+  Component
+} from 'react';
+import {
+  Redirect
+} from 'react-router';
 
 class Login extends Component {
   constructor() {
@@ -17,12 +21,18 @@ class Login extends Component {
 
   render() {
 
-    const { from } = this.props.location.state || {from : {pathname: '/'}};
-    const { redirectToReffer } = this.state;
+    const {
+      from
+    } = this.props.location.state || {
+      from: {
+        pathname: '/'
+      }
+    };
+    const {
+      redirectToReffer
+    } = this.state;
 
-    console.log(this.props);
-
-    if(redirectToReffer) {
+    if (redirectToReffer) {
       console.log('yes', this.props);
       <Redirect to={from}/>
     }

@@ -11,7 +11,7 @@ const fun3 = () => {
 };
 
 export {
-  fun1,
-  fun2,
-  fun3
+	fun1,
+	fun2,
+	fun3
 }

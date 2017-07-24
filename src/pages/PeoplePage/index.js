@@ -1,10 +1,16 @@
 /**
  * Created by arron on 2017/7/18.
  */
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import {
+  connect
+} from 'react-redux';
+import {
+  bindActionCreators
+} from 'redux';
 import * as peopleActions from '../../actions/people-actions';
 
 import PersonInput from './PersonInput';
@@ -19,9 +25,9 @@ class PeoplePage extends Component {
   }
 
   render() {
-    console.log(this.props);
-    const { people } = this.props;
-    console.log(people)
+    const {
+      people
+    } = this.props;
     return (
       <div>
         <PersonInput testThunk={this.props.actions.testThunk} />

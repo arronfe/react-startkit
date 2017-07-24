@@ -47,7 +47,7 @@
     "less-loader": "^4.0.5",
     "prop-types": "^15.5.10",
     "react-redux": "^5.0.5",
-    "react-router-dom": "^4.1.2",
+    "react-router": "^2.8.1",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
   },
