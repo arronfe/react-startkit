@@ -1,7 +1,4 @@
-### React-startkit
-
->Author: Arron
-
+### react-startkit
 
 #### Dev
 
@@ -11,7 +8,8 @@
 
 #### Build
 
-    npm build
+    npm run build
+
 
 #### serve build local
 

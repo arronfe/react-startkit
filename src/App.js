@@ -1,29 +1,20 @@
 import React, {
   Component
 } from 'react';
-import {
-  Link
-} from 'react-router';
-import './App.less';
-
-import PeoplePage from './pages/PeoplePage';
-
+import test from './test.png';
 import './App.less';
 
 class App extends Component {
-
-  async componentWillMount() {
-    console.log('async component mount')
-  }
-
   render() {
     return (
-      <div id="home">
-        <h2>Hello React router 4 , I am arron</h2>
-        <Link to="/page1">Go Page1</Link>
-        <Link to="/page2">Go Page2</Link>
-        <Link to="/page3">Go Page3</Link>
-        <PeoplePage />
+      <div className="App">
+        <div className="App-header">
+          <img src={test} className="App-logo" alt="logo" />
+          <h2>Welcome to React</h2>
+        </div>
+        <p className="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p>
         {this.props.children}
       </div>
     );
